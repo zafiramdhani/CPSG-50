@@ -2,14 +2,14 @@ import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
 class StartApp {
-  constructor({ content }) {
-    this._content = content;
+  constructor({ home }) {
+    this._home = home;
   }
 
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this._content.innerHTML = await page.render();
+    this._home.innerHTML = await page.render();
   }
 }
 
