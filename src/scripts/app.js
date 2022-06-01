@@ -5,7 +5,7 @@ import '../styles/style.css';
 import StartApp from './templates/template';
 
 const home = new StartApp({
-  home: document.querySelector('#home'),
+  home: document.querySelector('main'),
 });
 
 window.addEventListener('hashchange', () => {
