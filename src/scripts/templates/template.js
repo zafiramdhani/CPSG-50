@@ -2,8 +2,9 @@ import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
 class StartApp {
-  constructor({ home }) {
+  constructor({ home, startTest }) {
     this._home = home;
+    this._startTest = startTest;
   }
 
   async renderPage() {

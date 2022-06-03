@@ -177,8 +177,8 @@ h3 {
 }
 
 .tips {
-  padding-top: 5rem;
-  min-height: 100vh;
+  padding-top: 3rem;
+  min-height: 90vh;
 }
 
 .tips-title {
@@ -187,41 +187,18 @@ h3 {
   font-family: 'Open Sans', sans-serif;
 }
 
-.tips-wrapper {
-  margin-bottom: 25px;
+.tips .accordion .accordion-item {
+  margin-bottom: 20px;
 }
 
-.tips-wrapper > a {
-  width: 100%;
+.tips .accordion .accordion-header button {
   font-family: 'Open Sans', sans-serif;
-  line-height: 60px;
   font-weight: 600;
-  font-size: 1.1rem;
-  border-radius: 10px;
-  /* min-height: 70px; */
-  border: 3px solid white;
-  background-color: #c5c9fc;
 }
 
-.tips-wrapper > a:hover {
-  background-color: #9fa3da;
-}
-
-.tips-wrapper > a:focus {
-  background-color: #9fa3da;
-  border-radius: 10px 10px 0 0;
-}
-
-.tips-wrapper .card-body {
+.tips .accordion .accordion-body {
   font-family: 'PT Sans', sans-serif;
-  border-radius: 0 0 10px 10px;
   font-size: 1.1rem;
-  box-shadow:
-    0px 1.3px 1.4px rgba(0, 0, 0, 0.024),
-    0px 3.6px 4px rgba(0, 0, 0, 0.035),
-    0px 8.7px 9.6px rgba(0, 0, 0, 0.046),
-    0px 29px 32px rgba(0, 0, 0, 0.07)
-  ;
 }
 
 #about {
@@ -254,6 +231,18 @@ h3 {
 .right-footer li {
   list-style-type: circle;
   font-size: .8em;
+}
+
+.start-test_wrapper {
+  margin: 6rem auto 10rem auto;
+}
+
+.start-test_wrapper a {
+  text-decoration: none;
+}
+
+.start-test_wrapper p {
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
