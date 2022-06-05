@@ -234,7 +234,7 @@ h3 {
 }
 
 .start-test_wrapper {
-  margin: 6rem auto 10rem auto;
+  text-align: center;
 }
 
 .start-test_wrapper a {
@@ -243,6 +243,11 @@ h3 {
 
 .start-test_wrapper p {
   text-align: center;
+}
+
+.start-test_wrapper .snellen-chart {
+  margin-top: 5rem;
+  width: 900px;
 }
 
 @media screen and (max-width: 600px) {
