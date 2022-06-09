@@ -11,6 +11,7 @@ class StartApp {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
     this._home.innerHTML = await page.render();
+    await page?.afterRender();
   }
 }
 
