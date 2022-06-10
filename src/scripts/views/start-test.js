@@ -1,19 +1,23 @@
+const arrTest = [];
+const setTestObject = (id, result) => ({ id, result });
+
 const StartTest = {
   render() {
     return `
-      <div class="start-test_wrapper">
+      <div class="start-test_wrapper container text-center">
         <img class="snellen-chart" src="https://i.ibb.co/k10TJtG/vision-source-eye-chart-1.png" alt="Snellen chart">
         <p>This Snellen chart is obtained from <a href="https://visionsource.com/patients/free-eye-chart-download/" target="_blank" rel="noopener noreferrer">Visionsource.com</a></p>
-        <div>
-          <button class="btn-test" data-test="20/200">Test1</button>
-          <button class="btn-test" data-test="20/100">Test2</button>
-          <button class="btn-test" data-test="20/80">Test3</button>
-          <button class="btn-test" data-test="20/63">Test4</button>
-          <button class="btn-test" data-test="20/50">Test5</button>
-          <button class="btn-test" data-test="20/40">Test6</button>
-          <button class="btn-test" data-test="20/32">Test7</button>
-          <button class="btn-test" data-test="20/25">Test8</button>
-          <button class="btn-test" data-test="20/20">Test9</button>
+        <strong class="mt-5">Pilih baris terakhir yang dapat Anda baca</strong>
+        <div id="buttons-container" class="mb-5 mt-3">
+          <button class="btn btn-success btn-test" data-test="20/200">1</button>
+          <button class="btn btn-success btn-test" data-test="20/100">2</button>
+          <button class="btn btn-success btn-test" data-test="20/80">3</button>
+          <button class="btn btn-success btn-test" data-test="20/63">4</button>
+          <button class="btn btn-success btn-test" data-test="20/50">5</button>
+          <button class="btn btn-success btn-test" data-test="20/40">6</button>
+          <button class="btn btn-success btn-test" data-test="20/32">7</button>
+          <button class="btn btn-success btn-test" data-test="20/25">8</button>
+          <button class="btn btn-success btn-test" data-test="20/20">9</button>
         </div>
         <div class="test__container">
           
@@ -25,26 +29,38 @@ const StartTest = {
   afterRender() {
     const buttons = document.querySelectorAll('.btn-test');
     const testContainer = document.querySelector('.test__container');
-
-    if(localStorage.getItem('test') !== null) {
-      const dataStorage = localStorage.getItem('test');
-      testContainer.innerHTML = `
-        <p class="text-center">Anda berada di level</p>
-        <h1 class="text-center">${dataStorage}</h1>
-      `;
-    }
+    const buttonsContainer = document.getElementById('buttons-container');
 
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
+        const id = new Date();
         const valueInput = button.dataset.test;
-        localStorage.setItem('test', valueInput);
+        const testObject = setTestObject(id, valueInput);
+        arrTest.push(testObject);
+
+        localStorage.setItem('test', JSON.stringify(arrTest));
+
         testContainer.innerHTML = `
-          <p class="text-center">Anda berada di level</p>
-          <h1 class="text-center">${valueInput}</h1>
+          <div id="test-result" class="mb-5">
+            <p class="text-center">Skor tes anda adalah :</p>
+            <h1 class="text-center">${valueInput}</h1>
+            <a herf="#/riwayat" class="btn btn-warning">Riwayat</a>
+            <button class="btn btn-danger" id="tes-lagi">Tes Lagi</button>
+          </div>
         `;
+        buttonsContainer.style.display = 'none';
+
+        const tesLagi = document.getElementById('tes-lagi');
+        const testResult = document.getElementById('test-result');
+
+        tesLagi.addEventListener('click', () => {
+          testResult.style.display = 'none';
+          buttonsContainer.style.display = 'block';
+          document.documentElement.scrollTop = 0;
+        });
       });
-    })
-  }
+    });
+  },
 };
 
 export default StartTest;

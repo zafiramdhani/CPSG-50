@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import { Modal } from 'bootstrap';
 import './navbar-config';
 import tipsContent from './tips-content';
 import bg from '../public/hero-image2.png';
@@ -23,7 +22,7 @@ const Home = {
       </section>
         
       <section class="tes container" id="tes">
-        <div class="tes-title">
+        <div class="tes-title text-center">
           <h3>Kenapa EYETEST?</h3>
         </div>
         <div class="tes-cards">
@@ -53,11 +52,6 @@ const Home = {
           </div>
         </div>
 
-      <!--  <div class="tes-button">
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Coba Sekarang >>
-          </button>
-        </div> -->
         <div class="tes-button">
           <a href="#/start-test" type="button" class="btn btn-primary">
             Coba Sekarang >>
