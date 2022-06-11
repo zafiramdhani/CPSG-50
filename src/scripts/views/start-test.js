@@ -9,15 +9,15 @@ const StartTest = {
         <p>This Snellen chart is obtained from <a href="https://visionsource.com/patients/free-eye-chart-download/" target="_blank" rel="noopener noreferrer">Visionsource.com</a></p>
         <strong class="mt-5">Pilih baris terakhir yang dapat Anda baca</strong>
         <div id="buttons-container" class="mb-5 mt-3">
-          <button class="btn btn-success btn-test" data-test="20/200">1</button>
-          <button class="btn btn-success btn-test" data-test="20/100">2</button>
-          <button class="btn btn-success btn-test" data-test="20/80">3</button>
-          <button class="btn btn-success btn-test" data-test="20/63">4</button>
-          <button class="btn btn-success btn-test" data-test="20/50">5</button>
-          <button class="btn btn-success btn-test" data-test="20/40">6</button>
-          <button class="btn btn-success btn-test" data-test="20/32">7</button>
-          <button class="btn btn-success btn-test" data-test="20/25">8</button>
-          <button class="btn btn-success btn-test" data-test="20/20">9</button>
+          <button class="btn btn-success btn-test" data-test="20/200 (6/60)">1</button>
+          <button class="btn btn-success btn-test" data-test="20/100 (6/30)">2</button>
+          <button class="btn btn-success btn-test" data-test="20/80 (6/24)">3</button>
+          <button class="btn btn-success btn-test" data-test="20/63 (6/19.5)">4</button>
+          <button class="btn btn-success btn-test" data-test="20/50 (6/15)">5</button>
+          <button class="btn btn-success btn-test" data-test="20/40 (6/12)">6</button>
+          <button class="btn btn-success btn-test" data-test="20/32 (6/10)">7</button>
+          <button class="btn btn-success btn-test" data-test="20/25 (6/7.5)">8</button>
+          <button class="btn btn-success btn-test" data-test="20/20 (6/6)">9</button>
         </div>
         <div class="test__container">
           
@@ -44,6 +44,11 @@ const StartTest = {
           <div id="test-result" class="mb-5">
             <p class="text-center">Skor tes anda adalah :</p>
             <h1 class="text-center">${valueInput}</h1>
+            <ul>
+              <li>Ketajaman penglihatan pada baris ke 8 (20/25) ke atas perlu dilakukan evaluasi 
+              lebih lanjut oleh ahli mata untuk menentukan perawatan lain yang akan diperlukan</li>
+              <li>Ketajaman penglihatan "NORMAL" pada baris ke 9 (20/20)</li>
+            </ul>
             <a herf="#/riwayat" class="btn btn-warning">Riwayat</a>
             <button class="btn btn-danger" id="tes-lagi">Tes Lagi</button>
           </div>
