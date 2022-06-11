@@ -4,6 +4,28 @@ const setTestObject = (id, result) => ({ id, result });
 const StartTest = {
   render() {
     return `
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Instruksi</h5>
+          <ul>
+              <li>Posisikan pada jarak 6 meter dari tempat duduk dengan ketinggian sejajar dengan mata. 
+              Pada kondisi yang menggunakan kacamata / lensa kontak untuk pandangan jauh, maka pasien 
+              menggunakan kacamata / lensa kontak yang dimilikinya. Kacamata baca tidak boleh digunakan 
+              karena dapat mendistorsi pandangan jarak jauh.</li>
+              <li>Kondisikan ruangan dengan cahaya yang cukup.</li>
+              <li>Pada pemeriksaan visus mata kanan, maka koordinasikan untuk menutup mata kiri dengan 
+              menggunakan tangan yang mencembung tanpa memberikan penekanan pada mata.</li>
+              <li>Mulai pemeriksaan dengan membaca dari baris terbesar sampai dengan terkecil yang bisa dibaca. 
+              Aturan membaca tiap baris dapat dilakukan dari kiri ke kanan atau ditunjuk secara acak.</li>
+              <li>Jika tidak bisa membaca 2 huruf maka visus tetap di garis tersebut, jika tidak bisa melihat lebih dari setengah,
+               maka visus tepat diatas garis yang tidak bisa dibaca.</li>
+              <li>Catat hasil pemeriksaan visus sesuai dengan baris terkecil yang dapat dibaca oleh pasien, visus terbaik adalah 
+              bila pasien mampu membaca sampai dengan baris 6/6 yang memiliki arti bahwa pasien 
+              dapat membaca baris tersebut dari jarak 6 meter dimana populasi umum juga mampu membaca dari jarak 6 meter.</li>
+              <li>Ulangi prosedur 1 sampai 6 tersebut ke mata sebelahnya yang belum diperiksa.</li>
+          </ul>
+        </div>
+      </div>
       <div class="start-test_wrapper container text-center">
         <img class="snellen-chart" src="https://i.ibb.co/k10TJtG/vision-source-eye-chart-1.png" alt="Snellen chart">
         <p>This Snellen chart is obtained from <a href="https://visionsource.com/patients/free-eye-chart-download/" target="_blank" rel="noopener noreferrer">Visionsource.com</a></p>

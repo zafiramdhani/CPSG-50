@@ -206,6 +206,11 @@ h3 {
   font-size: .8em;
 }
 
+.card {
+  margin-top: 7rem;
+  background-color: yellow;
+}
+
 .start-test_wrapper {
   font-family: var(--opensans);
 }

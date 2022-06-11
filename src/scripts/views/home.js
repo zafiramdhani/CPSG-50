@@ -13,8 +13,8 @@ const Home = {
     return `
       <section class="hero container" id="home">
         <div class="hero-title">
-          <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatem reiciendis ipsum rem quia cumque.</p>
+          <h1>Tes Visus Mata untuk Uji Ketajaman Penglihatan</h1>
+          <p>Tes Visus Mata dengan Snellen Chart Online dengan mudah & praktis.</p>
           <a type="button" href="#tes" class="btn btn-primary">Mulai</a>
         </div>
         <div class="hero-image">
