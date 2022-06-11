@@ -22,7 +22,7 @@ const StartTest = {
               <li>Catat hasil pemeriksaan visus sesuai dengan baris terkecil yang dapat dibaca oleh pasien, visus terbaik adalah 
               bila pasien mampu membaca sampai dengan baris 6/6 yang memiliki arti bahwa pasien 
               dapat membaca baris tersebut dari jarak 6 meter dimana populasi umum juga mampu membaca dari jarak 6 meter.</li>
-              <li>Ulangi prosedur 1 sampai 6 tersebut ke mata sebelahnya yang belum diperiksa.</li>
+              <li>Ulangi prosedur 1 sampai 9 tersebut ke mata sebelahnya yang belum diperiksa.</li>
           </ul>
         </div>
       </div>
