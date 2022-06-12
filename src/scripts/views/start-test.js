@@ -4,25 +4,25 @@ const setTestObject = (id, result) => ({ id, result });
 const StartTest = {
   render() {
     return `
-      <div class="card">
+      <div class="card instruction-card container">
         <div class="card-body">
           <h5 class="card-title">Instruksi</h5>
           <ul>
-              <li>Posisikan pada jarak 6 meter dari tempat duduk dengan ketinggian sejajar dengan mata. 
-              Pada kondisi yang menggunakan kacamata / lensa kontak untuk pandangan jauh, maka pasien 
-              menggunakan kacamata / lensa kontak yang dimilikinya. Kacamata baca tidak boleh digunakan 
-              karena dapat mendistorsi pandangan jarak jauh.</li>
-              <li>Kondisikan ruangan dengan cahaya yang cukup.</li>
-              <li>Pada pemeriksaan visus mata kanan, maka koordinasikan untuk menutup mata kiri dengan 
-              menggunakan tangan yang mencembung tanpa memberikan penekanan pada mata.</li>
-              <li>Mulai pemeriksaan dengan membaca dari baris terbesar sampai dengan terkecil yang bisa dibaca. 
-              Aturan membaca tiap baris dapat dilakukan dari kiri ke kanan atau ditunjuk secara acak.</li>
-              <li>Jika tidak bisa membaca 2 huruf maka visus tetap di garis tersebut, jika tidak bisa melihat lebih dari setengah,
-               maka visus tepat diatas garis yang tidak bisa dibaca.</li>
-              <li>Catat hasil pemeriksaan visus sesuai dengan baris terkecil yang dapat dibaca oleh pasien, visus terbaik adalah 
-              bila pasien mampu membaca sampai dengan baris 6/6 yang memiliki arti bahwa pasien 
-              dapat membaca baris tersebut dari jarak 6 meter dimana populasi umum juga mampu membaca dari jarak 6 meter.</li>
-              <li>Ulangi prosedur 1 sampai 9 tersebut ke mata sebelahnya yang belum diperiksa.</li>
+            <li>Posisikan layar dengan mata pada jarak 3 meter (10 kaki) dari tempat duduk dengan ketinggian sejajar dengan mata. 
+            Pada kondisi yang menggunakan kacamata / lensa kontak untuk pandangan jauh, maka pasien 
+            menggunakan kacamata / lensa kontak yang dimilikinya. Kacamata baca tidak boleh digunakan 
+            karena dapat mendistorsi pandangan jarak jauh.</li>
+            <li>Kondisikan ruangan dengan cahaya yang cukup.</li>
+            <li>Pada pemeriksaan visus mata kanan, maka koordinasikan untuk menutup mata kiri dengan 
+            menggunakan tangan yang mencembung tanpa memberikan penekanan pada mata.</li>
+            <li>Mulai pemeriksaan dengan membaca dari baris terbesar sampai dengan terkecil yang bisa dibaca. 
+            Aturan membaca tiap baris dapat dilakukan dari kiri ke kanan atau ditunjuk secara acak.</li>
+            <li>Jika tidak bisa membaca 2 huruf maka visus tetap di garis tersebut, jika tidak bisa melihat lebih dari setengah,
+              maka visus tepat diatas garis yang tidak bisa dibaca.</li>
+            <li>Catat hasil pemeriksaan visus sesuai dengan baris terkecil yang dapat dibaca oleh pasien, visus terbaik adalah 
+            bila pasien mampu membaca sampai dengan baris 6/6 yang memiliki arti bahwa pasien 
+            dapat membaca baris tersebut dari jarak 6 meter dimana populasi umum juga mampu membaca dari jarak 6 meter.</li>
+            <li>Ulangi prosedur 1 sampai 9 tersebut ke mata sebelahnya yang belum diperiksa.</li>
           </ul>
         </div>
       </div>
@@ -66,11 +66,11 @@ const StartTest = {
           <div id="test-result" class="mb-5">
             <p class="text-center">Skor tes anda adalah :</p>
             <h1 class="text-center">${valueInput}</h1>
-            <ul>
-              <li>Ketajaman penglihatan pada baris ke 8 (20/25) ke atas perlu dilakukan evaluasi 
-              lebih lanjut oleh ahli mata untuk menentukan perawatan lain yang akan diperlukan</li>
-              <li>Ketajaman penglihatan "NORMAL" pada baris ke 9 (20/20)</li>
-            </ul>
+            <p>
+              Ketajaman penglihatan pada baris ke 8 (20/25) ke atas perlu dilakukan evaluasi 
+              lebih lanjut oleh ahli mata untuk menentukan perawatan lain yang akan diperlukan<br>
+              Ketajaman penglihatan "NORMAL" pada baris ke 9 (20/20)
+            </p>
             <a herf="#/riwayat" class="btn btn-warning">Riwayat</a>
             <button class="btn btn-danger" id="tes-lagi">Tes Lagi</button>
           </div>
