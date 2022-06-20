@@ -71,7 +71,7 @@ const StartTest = {
               lebih lanjut oleh ahli mata untuk menentukan perawatan lain yang akan diperlukan<br>
               Ketajaman penglihatan "NORMAL" pada baris ke 9 (20/20)
             </p>
-            <a herf="#/riwayat" class="btn btn-warning">Riwayat</a>
+            <a href="#/riwayat" class="btn btn-warning">Riwayat</a>
             <button class="btn btn-danger" id="tes-lagi">Tes Lagi</button>
           </div>
         `;
