@@ -28,25 +28,25 @@ const Home = {
         </div>
         <div class="tes-cards">
           <div class="card">
-            <img class="card-img-top" src="${dollarIcon}">
+            <img class="card-img-top" src="${dollarIcon}" alt="Free">
             <div class="card-body">
               <p class="card-text">100% Gratis</p>
             </div>
           </div>
           <div class="card">
-            <img src="${globeIcon}" class="card-img-top" alt="...">
+            <img src="${globeIcon}" class="card-img-top" alt="Access anywhere">
             <div class="card-body">
               <p class="card-text">Akses dimana saja dan<br>kapan saja</p>
             </div>
           </div>
           <div class="card">
-            <img src="${boltIcon}" class="card-img-top" alt="...">
+            <img src="${boltIcon}" class="card-img-top" alt="Fast and Easy">
             <div class="card-body">
               <p class="card-text">Mudah dan cepat</p>
             </div>
           </div>
           <div class="card">
-            <img src="${userIcon}" class="card-img-top" alt="...">
+            <img src="${userIcon}" class="card-img-top" alt="No account needed">
             <div class="card-body">
               <p class="card-text">Tidak perlu membuat akun</p>
             </div>
@@ -55,25 +55,8 @@ const Home = {
 
         <div class="tes-button">
           <a href="#/start-test" type="button" class="btn btn-primary">
-            Coba Sekarang >>
+            Coba Sekarang <i class="fa-solid fa-angles-right"></i>
           </a>
-        </div>
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Sebelum memulai...</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer justify-content-center">
-                <a href="#/start-test" class="btn btn-primary">Lanjutkan</a>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
