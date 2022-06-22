@@ -66,7 +66,7 @@ const StartTest = {
       button.addEventListener('click', () => {
         // eslint-disable-next-line no-undef
         swal({
-          title: 'Konfirmasi hasil tes',
+          title: 'Konfirmasi selesai tes',
           text: 'Apakah pilihan Anda sudah benar?',
           icon: 'warning',
           buttons: ['Batal', true],
@@ -74,6 +74,14 @@ const StartTest = {
         })
           .then((willSaved) => {
             if (willSaved) {
+              // eslint-disable-next-line no-undef
+              swal({
+                title: 'Sukses!',
+                text: 'Skor tes Anda berhasil disimpan',
+                icon: 'success',
+                button: 'Lihat skor',
+              });
+
               const id = new Date();
               const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
               const datetime = `${days[id.getDay()]},
