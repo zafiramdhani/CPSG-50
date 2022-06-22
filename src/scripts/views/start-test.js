@@ -64,40 +64,52 @@ const StartTest = {
 
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
-        const id = new Date();
-        const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
-        const datetime = `${days[id.getDay()]},
-          ${id.getDate()}/${id.getMonth() + 1}/${id.getFullYear()} @ 
-          ${id.getHours()}:${id.getMinutes()}:${id.getSeconds()}`;
-        const valueInput = button.dataset.test;
-        const testObject = setTestObject(datetime, valueInput);
-        arrTest.push(testObject);
+        // eslint-disable-next-line no-undef
+        swal({
+          title: 'Konfirmasi hasil tes',
+          text: 'Apakah pilihan Anda sudah benar?',
+          icon: 'warning',
+          buttons: ['Batal', true],
+          dangerMode: true,
+        })
+          .then((willSaved) => {
+            if (willSaved) {
+              const id = new Date();
+              const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+              const datetime = `${days[id.getDay()]},
+                ${id.getDate()}/${id.getMonth() + 1}/${id.getFullYear()} @ 
+                ${id.getHours()}:${id.getMinutes()}:${id.getSeconds()}`;
+              const valueInput = button.dataset.test;
+              const testObject = setTestObject(datetime, valueInput);
+              arrTest.push(testObject);
 
-        localStorage.setItem('EYETEST', JSON.stringify(arrTest));
+              localStorage.setItem('EYETEST', JSON.stringify(arrTest));
 
-        testContainer.innerHTML = `
-          <div id="test-result" class="mb-5">
-            <p class="text-center">Skor tes anda adalah :</p>
-            <h1 class="text-center">${valueInput}</h1>
-            <p>
-              Ketajaman penglihatan pada baris ke 8 (20/25) ke atas perlu dilakukan evaluasi 
-              lebih lanjut oleh ahli mata untuk menentukan perawatan lain yang akan diperlukan<br>
-              Ketajaman penglihatan "NORMAL" pada baris ke 9 (20/20)
-            </p>
-            <a href="#/riwayat" class="btn btn-warning"><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;Riwayat</a>
-            <button class="btn btn-danger" id="tes-lagi"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;Tes Lagi</button>
-          </div>
-        `;
-        buttonsContainer.style.display = 'none';
+              testContainer.innerHTML = `
+                <div id="test-result" class="mb-5">
+                  <p class="text-center">Skor tes anda adalah :</p>
+                  <h1 class="text-center">${valueInput}</h1>
+                  <p>
+                    Ketajaman penglihatan pada baris ke 8 (20/25) ke atas perlu dilakukan evaluasi 
+                    lebih lanjut oleh ahli mata untuk menentukan perawatan lain yang akan diperlukan<br>
+                    Ketajaman penglihatan "NORMAL" pada baris ke 9 (20/20)
+                  </p>
+                  <a href="#/riwayat" class="btn btn-warning"><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;Riwayat</a>
+                  <button class="btn btn-danger" id="tes-lagi"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;Tes Lagi</button>
+                </div>
+                `;
+              buttonsContainer.style.display = 'none';
 
-        const tesLagi = document.getElementById('tes-lagi');
-        const testResult = document.getElementById('test-result');
+              const tesLagi = document.getElementById('tes-lagi');
+              const testResult = document.getElementById('test-result');
 
-        tesLagi.addEventListener('click', () => {
-          testResult.style.display = 'none';
-          buttonsContainer.style.display = 'block';
-          document.documentElement.scrollTop = 0;
-        });
+              tesLagi.addEventListener('click', () => {
+                testResult.style.display = 'none';
+                buttonsContainer.style.display = 'block';
+                document.documentElement.scrollTop = 0;
+              });
+            }
+          });
       });
     });
   },

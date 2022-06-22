@@ -1,3 +1,4 @@
+/* eslint-disable no-loop-func */
 /* eslint-disable no-plusplus */
 import { arrTest } from './start-test';
 
@@ -33,9 +34,20 @@ const Riwayat = {
     const btnDelete = document.getElementsByClassName('btn-danger');
     for (let i = 0; i < btnDelete.length; i++) {
       btnDelete[i].addEventListener('click', () => {
-        arrTest.splice(btnDelete[i].value, 1);
-        localStorage.setItem('EYETEST', JSON.stringify(arrTest));
-        window.location.reload();
+        // eslint-disable-next-line no-undef
+        swal({
+          title: 'Hapus item ini?',
+          icon: 'warning',
+          buttons: ['Batal', true],
+          dangerMode: true,
+        })
+          .then((willDelete) => {
+            if (willDelete) {
+              arrTest.splice(btnDelete[i].value, 1);
+              localStorage.setItem('EYETEST', JSON.stringify(arrTest));
+              window.location.reload();
+            }
+          });
       });
     }
   },
