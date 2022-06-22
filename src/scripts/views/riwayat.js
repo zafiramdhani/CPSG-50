@@ -45,7 +45,15 @@ const Riwayat = {
             if (willDelete) {
               arrTest.splice(btnDelete[i].value, 1);
               localStorage.setItem('EYETEST', JSON.stringify(arrTest));
-              window.location.reload();
+              // eslint-disable-next-line no-undef
+              swal({
+                title: 'Sukses!',
+                text: 'Riwayat berhasil dihapus',
+                icon: 'success',
+                button: true,
+              }).then(() => {
+                document.location.reload();
+              });
             }
           });
       });
