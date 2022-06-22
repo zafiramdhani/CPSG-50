@@ -24,8 +24,11 @@ h3 {
   background-color: #2e82ff;
   transition: all .3s ease-in-out;
   font-weight: 700;
-  box-shadow: var(--btn-shadow)
-  ;
+  box-shadow: var(--btn-shadow);
+}
+
+.active a {
+  color: white !important;
 }
 
 .navbar {
@@ -83,21 +86,15 @@ h3 {
 
 .hero-title > a {
   font-family: var(--opensans);
-  width: 100px;
+  width: 110px;
+  font-weight: bold;
   box-shadow: var(--btn-shadow);
 }
 
 .hero-image > img {
   border-radius: 10%;
   width: 100%;
-  box-shadow:
-    0px 1.7px 2.2px rgba(0, 0, 0, 0.02),
-    0px 4.1px 5.3px rgba(0, 0, 0, 0.028),
-    0px 7.8px 10px rgba(0, 0, 0, 0.035),
-    0px 13.8px 17.9px rgba(0, 0, 0, 0.042),
-    0px 25.9px 33.4px rgba(0, 0, 0, 0.05),
-    0px 62px 80px rgba(0, 0, 0, 0.07)
-  ;
+  box-shadow: 0 10px 30px 0 rgba(31, 38, 135, 0.265);
 }
 
 .tes {
@@ -122,12 +119,7 @@ h3 {
   align-items: center;
   font-size: 1.1rem;
   border-radius: 10px;
-  box-shadow:
-    0px 1.3px 1.4px rgba(0, 0, 0, 0.024),
-    0px 3.6px 4px rgba(0, 0, 0, 0.035),
-    0px 8.7px 9.6px rgba(0, 0, 0, 0.046),
-    0px 29px 32px rgba(0, 0, 0, 0.07)
-  ;
+  box-shadow: 0 8px 20px 0 rgba(31, 38, 135, 0.201);
 }
 
 .tes-cards > .card > img {
@@ -239,6 +231,33 @@ h3 {
   width: 70px;
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+.history-container .table {
+  background-color: rgba(245, 245, 245, 0.272);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+.history-container .table thead {
+  background-color: #37304a;
+  font-family: var(--opensans);
+  font-size: 1.1rem;
+  color: white;
+}
+
+.history-container .table thead tr th {
+  padding: 20px 0;
+}
+
+.history-container .table tbody {
+  font-family: var(--ptsans);
+  font-size: 1.1rem;
+}
+
+.history-container .table tbody #btn-delete {
+  width: 80%;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 @media screen and (max-width: 600px) {
