@@ -233,6 +233,10 @@ h3 {
   font-size: 1.5rem;
 }
 
+.history-container {
+  margin-top: 5rem;
+}
+
 .history-container .table {
   background-color: rgba(245, 245, 245, 0.272);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );

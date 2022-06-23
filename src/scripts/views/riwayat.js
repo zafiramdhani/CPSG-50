@@ -5,8 +5,9 @@ import { arrTest } from './start-test';
 const Riwayat = {
   render() {
     return `
-      <div class="history-container container mt-5 mb-5 pt-5" style="min-height: 100vh;">
-        <table class="table table-striped table-hover mt-5">
+      <div class="history-container container mb-5 pt-5" style="min-height: 100vh;">
+        <h4 class="text-center">Riwayat Tes</h4>
+        <table class="table table-striped table-hover mt-3">
           <thead>
             <tr class="text-center">
               <th scope="col"><i class="fa-solid fa-hashtag"></i>&nbsp;\tNo</th>
